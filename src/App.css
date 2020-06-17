@@ -13,8 +13,16 @@
   }
 }
 
+.header-color{
+  background-color: pink;
+}
+
+.navi{
+  background-color: black;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #091414;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
