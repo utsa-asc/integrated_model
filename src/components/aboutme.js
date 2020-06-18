@@ -4,7 +4,7 @@ class About extends Component {
   render() {
     return(
       <div>
-        <h1>About Me</h1>
+        <h1>Kristian M Rodriguez Villanueva</h1>
         <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
         <p>Hi! My name is Kristian, but you can call me Kris. I am currently a sophomore at UTSA,<br></br>
         pursueing a major in Computer Engineering. I am also currently working at UTSA as a<br></br>
