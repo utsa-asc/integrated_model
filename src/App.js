@@ -150,7 +150,7 @@ function App() {
         <AppBar position="static">
           <Toolbar>
             <Typography className={classes.title} variant="h6" noWrap>
-              My Portfolio
+              UTSA
             </Typography>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
