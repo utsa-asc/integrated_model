@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { Header, Navigation} from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
 import Grid from "@material-ui/core/Container";
@@ -8,13 +7,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import IconButton from '@material-ui/core/IconButton';
@@ -116,6 +110,8 @@ function App() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
+      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
 
@@ -132,7 +128,12 @@ function App() {
     >
       <MenuItem>
         <IconButton color="inherit">
-          <Link to="/trial">Trial<NotificationsIcon /></Link>
+          <Link to="/">Trial<NotificationsIcon /></Link>
+        </IconButton>
+      </MenuItem>
+      <MenuItem>
+        <IconButton color="inherit">
+          <Link to="/trial2">Trial2<NotificationsIcon /></Link>
         </IconButton>
       </MenuItem>
     </Menu>

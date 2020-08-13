@@ -6,7 +6,7 @@ import Trial2 from './trial2';
 
 const Main = () => (
   <Switch>
-    <Route path="/" component={Trial} />
+    <Route exact path="/" component={Trial} />
     <Route path="/trial2" component={Trial2} />
   </Switch>
 )

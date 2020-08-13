@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Grid, Cell, Card, CardTitle, CardText, CardActions, CardMenu, IconButton } from 'react-mdl';
-import { Container, ButtonGroup, Button, Paper, Tabs, Tab, MenuList, MenuItem, Box, Typography, makeStyles} from '@material-ui/core';
+import React from 'react';
+import { Grid, Card, CardTitle, CardText } from 'react-mdl';
+import { Container, Tabs, Tab, Box, Typography, makeStyles} from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 function TabPanel(props) {
