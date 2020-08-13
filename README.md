@@ -1,5 +1,5 @@
 ## Integrated Model
- deployed: https://still-springs-99443.herokuapp.com/
+ deployed: https://utsa-integ-mod.herokuapp.com/
 ![Integrated Model](/public/Picture1.png)
 
 Design of webpage
