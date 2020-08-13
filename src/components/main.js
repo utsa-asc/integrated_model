@@ -1,16 +1,13 @@
-
-
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import AboutMe from './aboutme';
-import Projects from './projects';
+import Trial from './trial';
+import Trial2 from './trial2';
 
 const Main = () => (
   <Switch>
-    <Route exact path="/" component={AboutMe} />
-    <Route path="/aboutme" component={AboutMe} />
-    <Route path="/projects" component={Projects} />
+    <Route path="/" component={Trial} />
+    <Route path="/trial2" component={Trial2} />
   </Switch>
 )
 
