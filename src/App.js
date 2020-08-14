@@ -136,6 +136,11 @@ function App() {
           <Link to="/trial2">Trial2<NotificationsIcon /></Link>
         </IconButton>
       </MenuItem>
+      <MenuItem>
+        <IconButton color="inherit">
+          <Link to="/trial3">Trial3<NotificationsIcon /></Link>
+        </IconButton>
+      </MenuItem>
     </Menu>
   );
 
@@ -164,7 +169,11 @@ function App() {
                   <NotificationsIcon /> Trial2
                 </Link>
               </IconButton>
-            </div>
+              <IconButton color="inherit">
+                <Link to="/trial3">
+                  <NotificationsIcon /> Trial3
+                </Link>
+              </IconButton>            </div>
             <div className={classes.sectionMobile}>
               <IconButton
                 aria-label="show more"
@@ -181,10 +190,7 @@ function App() {
         {renderMobileMenu}
         {renderMenu}
       </div>
-      <Grid item>
-          <div className="page-content" />
-          <Main/>
-      </Grid>
+      <Main/>
     </Grid>
   );
 }
