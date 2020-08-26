@@ -1,8 +1,16 @@
 import React from 'react';
 import { Grid, Card, CardTitle, CardText } from 'react-mdl';
-import { Container, Tabs, Tab, Box, Typography, Paper} from '@material-ui/core';
+import { Container, Tabs, Tab, Box, Typography, Divider } from '@material-ui/core';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import MailIcon from '@material-ui/icons/Mail';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import Hidden from '@material-ui/core/Hidden';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,6 +53,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     height: '100vh'
   },
+  drawerPaper: {
+    width: "200px",
+  },
+  drawer: {
+    [theme.breakpoints.up('sm')]: {
+      width: "200px",
+      flexShrink: 0,
+    },
+  },
   tabs: {
     borderLeft: `1px solid ${theme.palette.divider}`,
     height: '100vh',
@@ -64,8 +81,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Trial3() {
+export default function Trial4() {
 
+  const theme = useTheme();
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -73,27 +91,71 @@ export default function Trial3() {
     setValue(newValue);
   };
 
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  // const container = window !== undefined ? () => window().document.body : undefined;
+
+  const drawer = (
+    <div>
+      <div className={classes.toolbar} />
+      <Divider />
+      <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+          <ListItem>All mail</ListItem>
+          <ListItem>Trash</ListItem>
+      </List>
+    </div>
+  );
+
   return (
     <div className={classes.root}>
-      <Grid item xs={3}>
-        <Tabs style={{backgroundColor: "gray", color: "black"}}
-          orientation="vertical"
-          variant="scrollable"
-          aria-label="Vertical tabs example"
-          className={classes.collegeTabs}
-        >
-          <Tab style={{marginTop:`3rem`, borderBottom:`1px solid`}} label="Architecture, Construction and Planning" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="Business" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="Education and Human Development" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="Engineering" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="Health, Community &amp; Policy" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="Liberal and Fine Arts" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="Sciences" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="Honors College" ></Tab>
-          <Tab style={{borderBottom:`1px solid`}} label="University College" ></Tab>
-        </Tabs>
-      </Grid>
+      
       <Grid item xs>
+        <Grid container>
+        <nav className={classes.drawer} aria-label="mailbox folders">
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          <Hidden smUp implementation="css">
+            <Drawer
+              // container={container}
+              variant="temporary"
+              anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              classes={{
+                paper: classes.drawerPaper,
+              }}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+            >
+              {drawer}
+            </Drawer>
+          </Hidden>
+          <Hidden xsDown implementation="css">
+            <Drawer
+              classes={{
+                paper: classes.drawerPaper,
+              }}
+              variant="permanent"
+              open
+            >
+              {drawer}
+            </Drawer>
+          </Hidden>
+        </nav>
+        </Grid>
         <TabPanel value={value} index={0}>
                 <span>Academic Affairs</span>
                 <h2>TAG LINE GOES HERE</h2>

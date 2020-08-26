@@ -141,6 +141,11 @@ function App() {
           <Link to="/trial3">Trial3<NotificationsIcon /></Link>
         </IconButton>
       </MenuItem>
+      {/* <MenuItem>
+        <IconButton color="inherit">
+          <Link to="/trial4">Trial4<NotificationsIcon /></Link>
+        </IconButton>
+      </MenuItem> */}
     </Menu>
   );
 
@@ -152,9 +157,9 @@ function App() {
       alignItems="center"
     >
       <div className={classes.grow}>
-        <AppBar position="static">
+        <AppBar style={{backgroundColor: "#0c2340"}} position="static">
           <Toolbar>
-            <Typography className={classes.title} variant="h6" noWrap>
+            <Typography className={classes.title} variant="h2" noWrap style={{color: "#f15a22"}}>
               UTSA
             </Typography>
             <div className={classes.grow} />
@@ -173,7 +178,13 @@ function App() {
                 <Link to="/trial3">
                   <NotificationsIcon /> Trial3
                 </Link>
-              </IconButton>            </div>
+              </IconButton>
+              {/* <IconButton color="inherit">
+                <Link to="/trial4">
+                  <NotificationsIcon /> Trial4
+                </Link>
+              </IconButton> */}
+              </div>
             <div className={classes.sectionMobile}>
               <IconButton
                 aria-label="show more"
