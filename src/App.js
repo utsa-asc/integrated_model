@@ -128,7 +128,7 @@ function App() {
     >
       <MenuItem>
         <IconButton color="inherit">
-          <Link to="/">Trial<NotificationsIcon /></Link>
+          <Link to="/">DEFAULT<NotificationsIcon /></Link>
         </IconButton>
       </MenuItem>
       <MenuItem>
@@ -166,7 +166,7 @@ function App() {
             <div className={classes.sectionDesktop}>
               <IconButton color="inherit">
                 <Link to="/">
-                  <NotificationsIcon /> Trial
+                  <NotificationsIcon /> DEFAULT
                 </Link>
               </IconButton>
               <IconButton color="inherit">
