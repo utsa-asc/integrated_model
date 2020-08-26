@@ -8,9 +8,9 @@ import Trial4 from './trial4';
 
 const Main = () => (
   <Switch>
-    <Route exact path="/" component={Trial} />
+    <Route exact path="/" component={Trial3} />
     <Route path="/trial2" component={Trial2} />
-    <Route path="/trial3" component={Trial3} />
+    <Route path="/trial3" component={Trial} />
     <Route path="/trial4" component={Trial4} />
   </Switch>
 )
