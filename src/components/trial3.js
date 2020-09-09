@@ -3,6 +3,7 @@ import { Grid, Card, CardTitle, CardText } from 'react-mdl';
 import { Container, Tabs, Tab, Box, Typography, Paper} from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import { CardMedia } from '@material-ui/core';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,7 +62,10 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     border: `3px solid #000`
-  }
+  },
+  media: {
+    height: 400,
+  },
 }));
 
 export default function Trial3() {
@@ -101,9 +105,13 @@ export default function Trial3() {
                 Bacon ipsum dolor amet short loin pancetta cow leberkas picanha, buffalo capicola turkey bacon. Pork bresaola venison, strip steak swine ball tip flank sausage corned beef turkey. Tongue kielbasa landjaeger, pastrami fatback chislic chuck meatball tail. Capicola strip steak chislic sirloin sausage short loin. Short ribs shankle buffalo sausage ground round.
                 </p>
                 <h3>Org Chart/VP Area Support Illustration Goes Here</h3>
-                <p>
-                Leberkas strip steak short loin turkey meatball. Strip steak biltong leberkas sausage corned beef, tongue beef tail andouille chuck spare ribs. Bacon biltong pancetta turducken porchetta chicken. Jowl chuck cow kielbasa kevin rump shoulder pork belly jerky, pork chop venison landjaeger filet mignon. Pastrami fatback corned beef chislic pig pancetta jerky pork picanha pork chop venison buffalo. Ball tip short ribs beef, boudin spare ribs buffalo t-bone ham hock pork loin ribeye biltong. Pork   chop brisket leberkas ham boudin tenderloin, short ribs alcatra hamburger pig flank cupim.
-                </p>
+                <Card>
+                  <CardMedia
+                    className={classes.media}
+                    image="./images/framework2.jpg"
+                    title="framework"
+                  />
+                </Card>
         </TabPanel>
         <TabPanel value={value} index={1}>
           <Grid container>
