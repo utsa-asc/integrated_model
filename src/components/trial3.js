@@ -1,9 +1,15 @@
 import React from 'react';
-import { Grid, Card, CardTitle, CardText } from 'react-mdl';
-import { Container, Tabs, Tab, Box, Typography, Paper} from '@material-ui/core';
+//import { Grid, Card, CardTitle, CardText } from 'react-mdl';
+import { Grid } from 'react-mdl';
+import { Container, Tabs, Tab, Box, Typography} from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { CardMedia } from '@material-ui/core';
+
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -105,11 +111,12 @@ export default function Trial3() {
                 Bacon ipsum dolor amet short loin pancetta cow leberkas picanha, buffalo capicola turkey bacon. Pork bresaola venison, strip steak swine ball tip flank sausage corned beef turkey. Tongue kielbasa landjaeger, pastrami fatback chislic chuck meatball tail. Capicola strip steak chislic sirloin sausage short loin. Short ribs shankle buffalo sausage ground round.
                 </p>
                 <h3>Org Chart/VP Area Support Illustration Goes Here</h3>
-                <Card>
+                <Card className={classes.root}>
                   <CardMedia
-                    className={classes.media}
-                    image="./images/framework2.jpg"
-                    title="framework"
+                    component="img"
+                    alt="Test"
+                    image="framework2.jpg"
+                    title="Test"
                   />
                 </Card>
         </TabPanel>
