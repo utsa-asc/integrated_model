@@ -113,7 +113,6 @@ export default function Trial3() {
                 <p>
                 Bacon ipsum dolor amet short loin pancetta cow leberkas picanha, buffalo capicola turkey bacon. Pork bresaola venison, strip steak swine ball tip flank sausage corned beef turkey. Tongue kielbasa landjaeger, pastrami fatback chislic chuck meatball tail. Capicola strip steak chislic sirloin sausage short loin. Short ribs shankle buffalo sausage ground round.
                 </p>
-                <h3>Org Chart/VP Area Support Illustration Goes Here</h3>
                 <Card className={classes.pic}>
                   <CardMedia
                     component="img"
