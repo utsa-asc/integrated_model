@@ -50,11 +50,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-    height: '100vh'
+    height: '120vh'
   },
   tabs: {
     borderLeft: `1px solid ${theme.palette.divider}`,
-    height: '100vh',
+    height: '120vh',
     // margin: '50px',
     position: 'center',
     backgroundColor: '#0c2340',
